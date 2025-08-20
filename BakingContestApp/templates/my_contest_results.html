@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Contest Results</title>
+</head>
+<body>
+    <h1>Baking Contest Results</h1>
+
+    {% if entries %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name Of Baking Item</th>
+                <th>Number of Excellent Votes</th>
+                <th>Number of OK Votes</th>
+                <th>Number of Bad Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry['NameOfBakingItem'] }}</td>
+                <td>{{ entry['NumExcellentVotes'] }}</td>
+                <td>{{ entry['NumOkVotes'] }}</td>
+                <td>{{ entry['NumBadVotes'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No contest entries found for you.</p>
+    {% endif %}
+
+    <p><a href="{{ url_for('home') }}">Go back to home page</a></p>
+    <p><a href="{{ url_for('logout') }}">Log out</a></p>
+</body>
+</html>

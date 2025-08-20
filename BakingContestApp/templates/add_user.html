@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New User</title>
+</head>
+<body>
+    <h1>Add a New Baking Contest User</h1>
+
+    <!-- Display Validation Errors -->
+    {% if errors %}
+        <div style="color: red;">
+            <ul>
+                {% for error in errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <!-- Form -->
+    <form method="POST" action="/add">
+        Name: <input type="text" name="name"><br>
+        Age: <input type="number" name="age"><br>
+        Phone Number: <input type="text" name="phone_number"><br>
+        Security Level: <input type="number" name="security_level" min="1" max="3"><br>
+        Login Password: <input type="password" name="login_password"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">Back to home</a>
+</body>
+</html>

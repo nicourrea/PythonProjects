@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Users</title>
+</head>
+<body>
+    <h1>Baking Contest Users</h1>
+    <table border="1">
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+            <th>Security Level</th>
+            <th>Login Password</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.UserId }}</td>
+            <td>{{ user.Name }}</td>
+            <td>{{ user.Age }}</td>
+            <td>{{ user.PhNum }}</td>
+            <td>{{ user.SecurityLevel }}</td>
+            <td>{{ user.LoginPassword }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Add Go Back to Home Page link -->
+    <p>
+        <a href="{{ url_for('home') }}">Go Back to Home Page</a>
+    </p>
+
+    <!-- Add Logout link -->
+    <p>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </p>
+</body>
+</html>

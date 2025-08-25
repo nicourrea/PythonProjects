@@ -1,0 +1,5 @@
+A small Python program that finds the **smallest prime triplet** starting at or above a user-provided integer.  
+It uses Python’s `multiprocessing` to split the search into worker processes for speed.
+
+A “prime triplet” here means three primes within a span of 6: `(p, q, r)` where `r - p == 6`.  
+(This includes patterns like `(p, p+2, p+6)` or `(p, p+4, p+6)`; the middle gap may be 2 or 4.)

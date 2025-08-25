@@ -1,0 +1,51 @@
+<!--
+Name: Nicolas Urrea
+FSUID: nu22c
+Due Date: 06/20/2025
+The program in this file is the individual work of Nicolas Urrea
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a New Course</title>
+</head>
+<body>
+        <h1> Add a New Course </h1>
+
+        <form action ="/addCourse" method ="post">
+            <h2> Course Information </h2>
+
+            <label for= "course_title">Course Title:</label><br>
+            <input type="text" id = "course_title" name = "course_title" required><br><br>
+            
+            <label for="course_department">Department:</label><br>
+            <input type="text" id="course_department" name="course_department" required><br><br>
+
+            <label for="semester">Semester:</label><br>
+            <input type="text" id="semester" name="semester" required><br><br>
+
+            <label for="enrollment">Enrollment:</label><br>
+            <input type="number" id="enrollment" name="enrollment" required><br><br>
+            
+            <h2> Instructor Information </h2>
+
+            <label for="instructor_id">Instructor ID:</label><br>
+            <input type="text" id="instructor_id" name="instructor_id" required><br><br>
+
+            <label for="instructor_name">Instructor Name:</label><br>
+            <input type="text" id="instructor_name" name="instructor_name" required><br><br>
+
+            <label for="instructor_department">Department:</label><br>
+            <input type="text" id="instructor_department" name="instructor_department" required><br><br>
+
+            <label for = "job_title"> Job Title:</label><br>
+            <input type="text" id="job_title" name="job_title" required><br><br>
+
+            <input type ="submit" value="Submit">
+        </form>
+
+        <br>
+        <a href="/">Back To Home</a>
+</body>
+</html>

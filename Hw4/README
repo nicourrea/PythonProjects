@@ -1,0 +1,5 @@
+This project implements two major cryptographic techniques from scratch: AES-128 encryption and decryption and Elliptic Curve Diffie-Hellman (ECDH) key exchange.
+
+The AES.py program implements the full AES-128 algorithm manually, including key expansion, substitution boxes, shifting rows, mixing columns, and adding round keys. It takes a plaintext string, encrypts it into a Base64-encoded ciphertext, and then decrypts it back to verify correctness.
+
+The ECC.py program implements Elliptic Curve Diffie-Hellman key exchange. It allows two parties to securely generate a shared secret over an insecure channel using elliptic curve mathematics. It computes public keys from private keys and derives a mutual secret key between two participants.

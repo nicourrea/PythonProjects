@@ -1,0 +1,21 @@
+# Nicolas Urrea
+# FSUID: nu22c
+# Due Date: July 17th 2025
+# The program in this file is the individual work of Nicolas Urrea
+
+For the first part of the pancake problem, I wrote an algorithmic solution that calculates the exact
+volume of the union of overlapping 3D rectangles (prisms). It uses a sweep line method over the X-axis
+and calculates the union area of the YZ faces at each step. This method is very accurate and deterministic,
+but it gets slower as the number of boxes increases, since it has to track and merge active intervals and
+events. It’s not parallelized, so it runs on a single core and can take longer for large input sizes.
+
+For the second part, I built a parallel Monte Carlo solution. Instead of finding the exact overlap, this version
+estimates the volume by randomly generating points and counting how many fall inside the prisms.
+It’s not exact, but it runs fast and works well when using lots of points. I used 150 processes with Python’s
+multiprocessing library to spread the work across cores. Each process checks its chunk of points, and we
+combine the results at the end.
+
+If this were implemented in a real-world distributed system, each worker node in a cluster could run a Monte
+Carlo simulation on a different chunk of points. The central node (or a reducer) would then gather the hit
+counts and compute the final volume estimate. This approach would scale easily and work well in cloud
+environments like AWS Lambda using a map-reduce model.

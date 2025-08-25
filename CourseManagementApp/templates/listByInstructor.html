@@ -1,0 +1,40 @@
+<!--
+Name: Nicolas Urrea
+FSUID: nu22c
+Due Date: 06/20/2025
+The program in this file is the individual work of Nicolas Urrea
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses by Instructor</title>
+</head>
+<body>
+    <h1>All Courses for {{ instructor_name }}</h1>
+
+    {% if courses %}
+    <table border="1">
+        <tr>
+            <th>Course ID</th>
+            <th>Title</th>
+            <th>Department</th>
+            <th>Enrollment</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ course[0] }}</td>
+            <td>{{ course[1] }}</td>
+            <td>{{ course[2] }}</td>
+            <td>{{ course[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No courses found for this instructor.</p>
+    {% endif %}
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

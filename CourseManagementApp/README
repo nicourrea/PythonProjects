@@ -1,0 +1,13 @@
+This project is a Flask-based web application that manages courses, instructors, and enrollments using an SQLite database. It allows users to add new courses and instructors, view courses taught by a specific instructor, and display the top five courses in a department based on average enrollment. The application uses HTML templates to handle input forms and display results dynamically.
+
+set up environment
+python3 -m venv venv
+source venv/bin/activate   # On Mac/Linux
+venv\Scripts\activate      # On Windows
+
+init db
+python init_db.py
+
+Run the app
+python app.py
+
